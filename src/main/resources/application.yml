@@ -2,18 +2,7 @@ server:
   port: 8080
 
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/study_log?serverTimezone=UTC&characterEncoding=UTF-8
-    username: root
-    password: root
+  data:
+    mongodb:
+      uri: mongodb+srv://jccc23_db_user:TIsCpptzZTw1IcTP@mycluster.epnwvg8.mongodb.net/mydatabase?retryWrites=true&w=majority&appName=myCluster
 
-  jpa:
-    database: mysql
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-    show-sql: true
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        format_sql: true
