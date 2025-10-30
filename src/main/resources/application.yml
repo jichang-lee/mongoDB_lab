@@ -1,8 +1,0 @@
-server:
-  port: 8080
-
-spring:
-  data:
-    mongodb:
-      uri: mongodb+srv://jccc23_db_user:TIsCpptzZTw1IcTP@mycluster.epnwvg8.mongodb.net/mydatabase?retryWrites=true&w=majority&appName=myCluster
-
