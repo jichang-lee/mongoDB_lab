@@ -6,17 +6,20 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "chatting_content")
+import java.time.LocalDateTime;
+
+@Document(collection = "chatting_room")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ChattingContent {
+public class ChattingRoom {
+
     @Id
     private String id;
 
-    private String message;
-
-    private ChattingRoom chattingRoom;
+    private String chattingRoomName;
 
     private User user;
+
+    private LocalDateTime createAt;
 }

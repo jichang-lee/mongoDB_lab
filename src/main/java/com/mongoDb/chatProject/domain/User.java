@@ -6,17 +6,16 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "chatting_content")
+@Document(collection = "user")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ChattingContent {
+public class User {
+
     @Id
     private String id;
 
-    private String message;
+    private String username;
 
-    private ChattingRoom chattingRoom;
-
-    private User user;
+    private Long age;
 }
