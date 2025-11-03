@@ -4,11 +4,13 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "username": "사지창",
-  "age": 25
+  "email": "hwang@naver.com",
+  "username": "황석준",
+  "nickname": "dduunn123",
+  "age": 23
 }
 
 
 ### finaAll
-GET http://localhost:8080/user/find/all
+GET http://localhost:8080/user/find/all?page=2&size=3
 Accept: application/json

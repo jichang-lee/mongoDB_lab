@@ -1,6 +1,7 @@
 package com.mongoDb.chatProject.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
@@ -26,4 +27,14 @@ public class User {
     private Long age;
 
     private LocalDateTime createdAt;
+
+    @Builder
+    public User(String email, String username, String nickname, Long age) {
+        this.email = email;
+        this.username = username;
+        this.nickname = nickname;
+        this.age = age;
+        this.createdAt = LocalDateTime.now();
+    }
 }
+
