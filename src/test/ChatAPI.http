@@ -1,0 +1,48 @@
+### Create chat room - 정상 케이스 (3명)
+POST http://localhost:8080/chat/create/room
+Content-Type: application/json
+Accept: application/json
+# Authorization: Bearer <YOUR_JWT_TOKEN_HERE>
+
+{
+  "chatRoomName": "크리스마스 모임 채팅방",
+  "members": [
+    {
+      "userId": "69087fe56258d420e1ad2db9",
+      "username": "이지창"
+    },
+    {
+      "userId": "6908803e6258d420e1ad2dbc",
+      "username": "홍성주"
+    },
+    {
+      "userId": "6908804f6258d420e1ad2dbd",
+      "username": "황석준"
+    }
+  ]
+}
+
+###
+
+### Create chat room - 오류 케이스 (존재하지 않는 user 포함)
+POST http://localhost:8080/chat/create/room
+Content-Type: application/json
+Accept: application/json
+
+{
+  "chatRoomName": "테스트방 - 오류",
+  "members": [
+    {
+      "userId": "69087fe56258d420e1ad2db9",
+      "username": "이지창"
+    },
+    {
+      "userId": "nonexistentUserId12345",
+      "username": "없는사람"
+    }
+  ]
+}
+
+### finaAll
+GET http://localhost:8080/chat/find/all
+Accept: application/json

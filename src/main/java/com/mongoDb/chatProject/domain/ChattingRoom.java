@@ -19,6 +19,8 @@ public class ChattingRoom {
 
     private String chattingRoomName;
 
+    private Member master;
+
     private List<Member> members;
 
     private LatestMessage latestMessage;
@@ -26,6 +28,7 @@ public class ChattingRoom {
     private LocalDateTime createAt;
 
     @Data
+    @AllArgsConstructor
     @Builder
     public static class Member {
         private String userId;
@@ -38,5 +41,13 @@ public class ChattingRoom {
         private String nickname;
         private String latestMessage;
         private LocalDateTime latestMessageTime;
+    }
+
+    @Builder
+    public ChattingRoom(Member master,String chattingRoomName, List<Member> members) {
+        this.master = master;
+        this.chattingRoomName = chattingRoomName;
+        this.members = members;
+        this.createAt = LocalDateTime.now();
     }
 }

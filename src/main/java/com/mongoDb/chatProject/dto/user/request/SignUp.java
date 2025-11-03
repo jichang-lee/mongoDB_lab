@@ -1,4 +1,4 @@
-package com.mongoDb.chatProject.dto.user;
+package com.mongoDb.chatProject.dto.user.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

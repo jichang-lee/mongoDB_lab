@@ -1,7 +1,7 @@
 package com.mongoDb.chatProject.service;
 
 import com.mongoDb.chatProject.domain.User;
-import com.mongoDb.chatProject.dto.user.SignUp;
+import com.mongoDb.chatProject.dto.user.request.SignUp;
 import com.mongoDb.chatProject.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -10,7 +10,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
