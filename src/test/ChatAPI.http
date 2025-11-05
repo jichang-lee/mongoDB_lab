@@ -44,5 +44,23 @@ Accept: application/json
 }
 
 ### finaAll
-GET http://localhost:8080/chat/find/all
+### 채팅방 ID : 69088a0b69c9e702dde9e2ee
+GET http://localhost:8080/chat/find/all/room
+Accept: application/json
+
+### sendMseesage
+POST http://localhost:8080/chat/message/send
+Content-Type: application/json
+Accept: application/json
+
+{
+  "roomId": "69088a0b69c9e702dde9e2ee",
+  "memberId": "69087fe56258d420e1ad2db9",
+  "message": "ㅎㅇㅋㅋ"
+}
+
+
+### sendMessage By roomId
+### 채팅방 ID : 69088a0b69c9e702dde9e2ee
+GET http://localhost:8080/chat/find/all/message?roomId=69088a0b69c9e702dde9e2ee
 Accept: application/json

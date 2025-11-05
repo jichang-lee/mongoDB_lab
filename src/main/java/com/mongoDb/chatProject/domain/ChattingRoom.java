@@ -10,6 +10,7 @@ import java.util.List;
 
 @Document(collection = "chatting_room")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class ChattingRoom {
@@ -37,6 +38,7 @@ public class ChattingRoom {
 
     // 채팅방 조회시 텍스트 미리보기용
     @Data
+    @Builder
     public static class LatestMessage{
         private String nickname;
         private String latestMessage;
