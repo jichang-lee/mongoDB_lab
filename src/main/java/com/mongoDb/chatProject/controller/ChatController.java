@@ -9,6 +9,7 @@ import com.mongoDb.chatProject.repository.ChattingContentRepository;
 import com.mongoDb.chatProject.repository.ChattingRoomRepository;
 import com.mongoDb.chatProject.service.ChatService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -37,7 +38,7 @@ public class ChatController {
      * =======================================
      * 아래는 데이터 확인용
      */
-    @GetMapping("/find/all/room")
+    @GetMapping("/find/all/room/vvv")
     public List<ChattingRoom> getAllChattingRooms() {
         return chattingRoomRepository.findAll();
     }
