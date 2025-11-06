@@ -85,11 +85,11 @@
 
         const payload = {
             roomId: currentRoomId,
-            memberId: "test-user-123",  // 테스트용 고정 ID
+            memberId: "69087fe56258d420e1ad2db9",  // 테스트용 고정 ID
             message: message
         };
 
-        stompClient.send("/app/chat.send", {}, JSON.stringify(payload));
+        stompClient.send("/app/message.send", {}, JSON.stringify(payload));
         input.value = '';
     }
 
